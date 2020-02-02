@@ -7,7 +7,7 @@
 ;; Description: Manage minor-modes in table
 ;; Keyword: tools minor-mode manage
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.3") (manage-minor-mode "1.1"))
+;; Package-Requires: ((emacs "25.1") (manage-minor-mode "1.1"))
 ;; URL: https://github.com/jcs090218/manage-minor-mode-table
 
 ;; This file is NOT part of GNU Emacs.
@@ -54,7 +54,7 @@
   "Record down the buffer name.")
 
 (defvar manage-minor-mode-table--record-major-mode ""
-  "Record down the major-mode.")
+  "Record down the `major-mode'.")
 
 (defvar manage-minor-mode-table--on-word
   (propertize "On" 'face 'manage-minor-mode-face-active)
