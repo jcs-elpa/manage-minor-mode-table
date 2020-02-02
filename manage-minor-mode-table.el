@@ -8,7 +8,7 @@
 ;; Keyword: tools minor-mode manage
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1") (manage-minor-mode "1.1"))
-;; URL: https://github.com/jcs090218/manage-minor-mode-table
+;; URL: https://github.com/jcs-elpa/manage-minor-mode-table
 
 ;; This file is NOT part of GNU Emacs.
 
