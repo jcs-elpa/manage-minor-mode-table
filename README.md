@@ -5,6 +5,10 @@
 # manage-minor-mode-table
 > Manage minor-modes in table.
 
+<p align="center">
+  <img src="./screenshot/demo.png" width="450" height="513"/>
+</p>
+
 
 ## Contribution
 
