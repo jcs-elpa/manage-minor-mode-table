@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Manage minor-modes in table
 ;; Keyword: tools minor-mode manage
-;; Version: 0.0.1
+;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1") (manage-minor-mode "1.1"))
 ;; URL: https://github.com/jcs090218/manage-minor-mode-table
 
