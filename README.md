@@ -9,7 +9,7 @@
   <img src="./screenshot/demo.png" width="450" height="513"/>
 </p>
 
-This package is base on [https://github.com/emacsorphanage/manage-minor-mode](manage-minor-mode), 
+This package is base on [manage-minor-mode](https://github.com/emacsorphanage/manage-minor-mode), 
 but uses `tabulated-list` instead of the dedicated interface buffer.
 
 ## Usage
