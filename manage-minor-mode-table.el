@@ -35,14 +35,14 @@
 (require 'manage-minor-mode)
 
 (setq manage-minor-mode-table--format
-      (vector  (list "Status" 10 t)
-               (list "Name" 40 t)
-               (list "Edit" 5 t)))
+      (vector  (list "CD" 2 t)
+               (list "Status" 10 t)
+               (list "Name" 40 t)))
 
 (defconst manage-minor-mode-table--format
-  (vector (list "Status" 10 t)
-          (list "Name" 40 t)
-          (list "Edit" 5 t))
+  (vector (list "CD" 2 t) ; Changed
+          (list "Status" 10 t)
+          (list "Name" 40 t))
   "Format to assign to `tabulated-list-format' variable.")
 
 (defface manage-minor-mode-table-edit-face
@@ -77,9 +77,10 @@
   "Toggle minor mode on line."
   (interactive)
   (let* ((id (tabulated-list-get-id)) (entry (tabulated-list-get-entry))
-         (status (aref entry 0)) (is-on (string= "On" status))
+         (status (aref entry 1)) (is-on (string= "On" status))
          (turn-flag (if is-on -1 1))
-         (mm (aref entry 1)) (mm-name (intern mm)))
+         (turn-word (if is-on manage-minor-mode-table--off-word manage-minor-mode-table--on-word))
+         (mm (aref entry 2)) (mm-name (intern mm)))
     (if (not (arrayp entry))
         (user-error "[ERROR] Can't toggle minor mode when no entry on current line")
       (if (not (get-buffer manage-minor-mode-table--record-buffer-name))
@@ -90,11 +91,11 @@
           (funcall-interactively mm-name turn-flag))
         (tabulated-list-delete-entry)
         (tabulated-list-print-entry id
-                                    (vector manage-minor-mode-table--on-word
-                                            mm
-                                            (propertize
+                                    (vector (propertize
                                              "*"
-                                             'face 'manage-minor-mode-table-edit-face)))
+                                             'face 'manage-minor-mode-table-edit-face)
+                                            turn-word
+                                            mm))
         (forward-line -1)))))
 
 (defun manage-minor-mode-table--get-entries ()
@@ -105,18 +106,18 @@
     ;; For ACTIVE minor-mode.
     (dolist (mm active-list)
       (let ((new-entry '()) (new-entry-value '()))
-        (push "" new-entry-value)  ; Edit
         (push (symbol-name mm) new-entry-value)    ; Name
         (push manage-minor-mode-table--on-word new-entry-value)  ; Status
+        (push "" new-entry-value)  ; CD
         (push (vconcat new-entry-value) new-entry)  ; Turn into vector.
         (push (number-to-string id-count) new-entry)  ; ID
         (push new-entry entries)))
     ;; For INACTIVE minor-mode.
     (dolist (mm inactive-list)
       (let ((new-entry '()) (new-entry-value '()))
-        (push "" new-entry-value)  ; Edit
         (push (symbol-name mm) new-entry-value)    ; Name
         (push manage-minor-mode-table--off-word new-entry-value)  ; Status
+        (push "" new-entry-value)  ; CD
         (push (vconcat new-entry-value) new-entry)  ; Turn into vector.
         (push (number-to-string id-count) new-entry)  ; ID
         (push new-entry entries)))
