@@ -9,12 +9,14 @@
   <img src="./screenshot/demo.png" width="450" height="513"/>
 </p>
 
-This package is base on [manage-minor-mode](https://github.com/emacsorphanage/manage-minor-mode), 
-but uses `tabulated-list` instead of the dedicated interface buffer.
+This package is base on [manage-minor-mode](https://github.com/emacsorphanage/manage-minor-mode),
+but it uses `tabulated-list` instead of the dedicated interface buffer. 
+There are not much differences between the two packages, IMO this 
+is a better way to manage `minor-mode`s.
 
 ## Usage
 
-Call `manage-minor-mode-table` function like this.
+Call `manage-minor-mode-table` function/command like this.
 
 ```
 M-x manage-minor-mode-table
@@ -26,4 +28,3 @@ If you would like to contribute to this project, you may either
 clone and make pull requests to this repository. Or you can
 clone the project and establish your own branch of this tool.
 Any methods are welcome!
-
