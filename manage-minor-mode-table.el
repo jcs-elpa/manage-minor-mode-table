@@ -34,16 +34,17 @@
 
 (require 'manage-minor-mode)
 
-(setq manage-minor-mode-table--format
-      (vector  (list "CD" 2 t)
-               (list "Status" 10 t)
-               (list "Name" 40 t)))
 
 (defconst manage-minor-mode-table--format
   (vector (list "CD" 2 t) ; Changed
           (list "Status" 10 t)
           (list "Name" 40 t))
   "Format to assign to `tabulated-list-format' variable.")
+
+(defface manage-minor-mode-table-hl-face
+  '((t :inherit manage-minor-mode-face-active :background "#333333"))
+  "Face for highlighting the keyword `buffer-name' and `major-mode'."
+  :group 'manage-minor-mode)
 
 (defface manage-minor-mode-table-edit-face
   '((t :foreground "green"))
@@ -133,10 +134,10 @@
         (format "buffer: %s, major-mode: %s"
                 (propertize
                  (format "%s" manage-minor-mode-table--record-buffer-name)
-                 'face (list :background  "#333333" :foreground (face-foreground 'manage-minor-mode-face-active)))
+                 'face 'manage-minor-mode-table-hl-face)
                 (propertize
                  (format "%s" manage-minor-mode-table--record-major-mode)
-                 'face (list :background  "#333333" :foreground (face-foreground 'manage-minor-mode-face-active)))))
+                 'face 'manage-minor-mode-table-hl-face)))
   (setq tabulated-list-sort-key (cons "Name" nil))
   (tabulated-list-init-header)
   (setq tabulated-list-entries (manage-minor-mode-table--get-entries))
