@@ -36,8 +36,8 @@
 
 
 (defconst manage-minor-mode-table--format
-  (vector (list "CD" 2 t) ; Changed
-          (list "Status" 10 t)
+  (vector (list "CD" 3 t) ; Changed
+          (list "Status" 7 t)
           (list "Name" 40 t))
   "Format to assign to `tabulated-list-format' variable.")
 
@@ -129,7 +129,7 @@
   "Major mode for managing minor mode."
   :group 'manage-minor-mode
   (setq tabulated-list-format manage-minor-mode-table--format)
-  (setq tabulated-list-padding 2)
+  (setq tabulated-list-padding 1)
   (setq tabulated-list--header-string
         (format "buffer: %s, major-mode: %s"
                 (propertize
