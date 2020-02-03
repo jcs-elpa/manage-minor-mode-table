@@ -36,7 +36,7 @@
 
 
 (defconst manage-minor-mode-table--format
-  (vector (list "CD" 3 t) ; Changed
+  (vector (list "CD" 3 t)  ; Changed
           (list "Status" 7 t)
           (list "Name" 40 t))
   "Format to assign to `tabulated-list-format' variable.")
