@@ -1,4 +1,5 @@
 # ignore these directories.
+/.cask
 /.git
 /recipes
 /test
