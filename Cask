@@ -1,3 +1,3 @@
 (source melpa)
 
-(package-file "manage-minor-mode-plus.el")
+(package-file "manage-minor-mode-table.el")
