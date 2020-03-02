@@ -112,7 +112,8 @@
         (push "" new-entry-value)  ; CD
         (push (vconcat new-entry-value) new-entry)  ; Turn into vector.
         (push (number-to-string id-count) new-entry)  ; ID
-        (push new-entry entries)))
+        (push new-entry entries)
+        (setq id-count (1+ id-count))))
     ;; For INACTIVE minor-mode.
     (dolist (mm inactive-list)
       (let ((new-entry '()) (new-entry-value '()))
@@ -121,7 +122,8 @@
         (push "" new-entry-value)  ; CD
         (push (vconcat new-entry-value) new-entry)  ; Turn into vector.
         (push (number-to-string id-count) new-entry)  ; ID
-        (push new-entry entries)))
+        (push new-entry entries)
+        (setq id-count (1+ id-count))))
     entries))
 
 (define-derived-mode manage-minor-mode-table-mode tabulated-list-mode
