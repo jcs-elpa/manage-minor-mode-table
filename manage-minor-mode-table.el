@@ -34,7 +34,6 @@
 
 (require 'manage-minor-mode)
 
-
 (defconst manage-minor-mode-table--format
   (vector (list "CD" 3 t)  ; Changed
           (list "Status" 7 t)
@@ -65,7 +64,6 @@
   (propertize "Off" 'face 'manage-minor-mode-face-inactive)
   "Off word with text properties.")
 
-
 (defvar manage-minor-mode-table-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "RET") 'manage-minor-mode-table--toggle)
@@ -73,6 +71,7 @@
     map)
   "Keymap for `manage-minor-mode-table-mode'.")
 
+;;; Core
 
 (defun manage-minor-mode-table--toggle ()
   "Toggle minor mode on line."
@@ -154,7 +153,6 @@
   (setq manage-minor-mode-table--record-major-mode major-mode)
   (pop-to-buffer "*manage-minor-mode-table*" nil)
   (manage-minor-mode-table-mode))
-
 
 (provide 'manage-minor-mode-table)
 ;;; manage-minor-mode-table.el ends here
