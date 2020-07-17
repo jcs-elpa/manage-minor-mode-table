@@ -3,12 +3,11 @@
 [![MELPA Stable](https://stable.melpa.org/packages/manage-minor-mode-table-badge.svg)](https://stable.melpa.org/#/manage-minor-mode-table)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-
 # manage-minor-mode-table
 > Manage minor-modes in table.
 
 <p align="center">
-  <img src="./screenshot/demo.png" width="450" height="513"/>
+  <img src="./etc/demo.png" width="450" height="513"/>
 </p>
 
 This package is base on [manage-minor-mode](https://github.com/emacsorphanage/manage-minor-mode),
