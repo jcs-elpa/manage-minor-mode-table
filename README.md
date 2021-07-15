@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.com/jcs090218/manage-minor-mode-table.svg?branch=master)](https://travis-ci.com/jcs090218/manage-minor-mode-table)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![MELPA](https://melpa.org/packages/manage-minor-mode-table-badge.svg)](https://melpa.org/#/manage-minor-mode-table)
 [![MELPA Stable](https://stable.melpa.org/packages/manage-minor-mode-table-badge.svg)](https://stable.melpa.org/#/manage-minor-mode-table)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![CI](https://github.com/jcs-elpa/manage-minor-mode-table/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/manage-minor-mode-table/actions/workflows/test.yml)
 
 # manage-minor-mode-table
 > Manage minor-modes in table.
