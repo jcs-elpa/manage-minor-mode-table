@@ -4,11 +4,10 @@
 ;; Created date 2020-02-02 22:50:10
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Manage minor-modes in table
-;; Keyword: tools minor-mode manage
+;; URL: https://github.com/jcs-elpa/manage-minor-mode-table
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "25.1") (manage-minor-mode "1.1"))
-;; URL: https://github.com/jcs-elpa/manage-minor-mode-table
+;; Keywords: tools minor-mode manage
 
 ;; This file is NOT part of GNU Emacs.
 

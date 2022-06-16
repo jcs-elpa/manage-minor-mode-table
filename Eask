@@ -2,6 +2,9 @@
          "0.1.3"
          "Manage minor-modes in table")
 
+(website-url "https://github.com/jcs-elpa/manage-minor-mode-table")
+(keywords "tools" "minor-mode" "manage")
+
 (package-file "manage-minor-mode-table.el")
 
 (source "gnu")
