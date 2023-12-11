@@ -49,7 +49,7 @@ Install all dependencies and development dependencies:
 $ eask install-deps --dev
 ```
 
-To test package's installation:
+To test the package's installation:
 
 ```sh
 $ eask package
