@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "manage-minor-mode-table"
          "0.1.3"
          "Manage minor-modes in table")
